@@ -331,13 +331,37 @@ body {
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.6);
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+}
+
+.cta-button:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 10px rgba(39, 174, 96, 0.4);
+}
+
+/* Pulse animation for CTA button */
+@keyframes pulse-btn {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 4px 25px rgba(39, 174, 96, 0.7);
+    }
+}
+
+.cta-button {
+    animation: pulse-btn 2s infinite;
 }
 
 .cta-button.large {
     font-size: 20px;
     padding: 22px 40px;
+    animation: pulse-btn 1.5s infinite;
 }
 
 .benefits-intro h3 {
@@ -570,6 +594,19 @@ body {
 
 .press-logo {
     opacity: 0.7;
+}
+
+.press-logo-img {
+    height: 40px;
+    width: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    filter: grayscale(20%);
+}
+
+.press-logo-img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
 }
 
 .logo-text {
