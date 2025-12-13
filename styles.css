@@ -511,6 +511,19 @@ body {
     border-radius: 12px;
 }
 
+.social-proof-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a3a5c;
+    margin-bottom: 8px;
+}
+
+.social-proof-stars {
+    font-size: 24px;
+    color: #f1c40f;
+    margin-bottom: 16px;
+}
+
 /* Size Guide Section */
 .size-guide-section {
     padding: 40px 0;
