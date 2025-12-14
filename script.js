@@ -99,11 +99,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const sizeButtons = document.querySelectorAll('.size-btn');
     const packOptions = document.querySelectorAll('.pack-option');
+    const buyButton = document.getElementById('buy-button');
+
+    // Links de compra para cada variável
+    // ATUALIZE ESTES LINKS COM OS LINKS REAIS DE CHECKOUT
+    const purchaseLinks = {
+        '35-40': {
+            '1': 'https://example.com/checkout/35-40-1unidad',  // Variável 1
+            '2': 'https://example.com/checkout/35-40-2unidades' // Variável 2
+        },
+        '41-46': {
+            '1': 'https://example.com/checkout/41-46-1unidad',  // Variável 3
+            '2': 'https://example.com/checkout/41-46-2unidades' // Variável 4
+        }
+    };
+
+    function updateBuyLink() {
+        const selectedSize = document.querySelector('.size-btn.active')?.dataset.size || '35-40';
+        const selectedPack = document.querySelector('input[name="pack"]:checked')?.value || '1';
+
+        if (buyButton && purchaseLinks[selectedSize] && purchaseLinks[selectedSize][selectedPack]) {
+            buyButton.href = purchaseLinks[selectedSize][selectedPack];
+        }
+    }
 
     sizeButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             sizeButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            updateBuyLink();
         });
     });
 
@@ -112,8 +136,12 @@ document.addEventListener('DOMContentLoaded', function () {
             packOptions.forEach(o => o.classList.remove('selected'));
             option.classList.add('selected');
             option.querySelector('input[type="radio"]').checked = true;
+            updateBuyLink();
         });
     });
+
+    // Inicializa o link
+    updateBuyLink();
 
 
     // ==================== 
