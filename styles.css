@@ -298,20 +298,39 @@ body {
 }
 
 .pricing {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .original-price {
     color: #999;
     text-decoration: line-through;
-    font-size: 16px;
-    margin-right: 12px;
+    font-size: 14px;
 }
 
 .current-price {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 800;
     color: #1a3a5c;
+}
+
+.oferta-badge {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #666;
+}
+
+.free-shipping {
+    color: #27ae60;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
 /* Purchase Section */
