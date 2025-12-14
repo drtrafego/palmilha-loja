@@ -94,6 +94,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // ==================== 
+    // SIZE & PACK SELECTOR
+    // ==================== 
+
+    const sizeButtons = document.querySelectorAll('.size-btn');
+    const packOptions = document.querySelectorAll('.pack-option');
+
+    sizeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            sizeButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+
+    packOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            packOptions.forEach(o => o.classList.remove('selected'));
+            option.classList.add('selected');
+            option.querySelector('input[type="radio"]').checked = true;
+        });
+    });
+
+
+    // ==================== 
     // SMOOTH SCROLL
     // ==================== 
 
