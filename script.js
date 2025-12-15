@@ -101,16 +101,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const packOptions = document.querySelectorAll('.pack-option');
     const buyButton = document.getElementById('buy-button');
 
-    // Links de compra para cada variável
-    // ATUALIZE ESTES LINKS COM OS LINKS REAIS DE CHECKOUT
+    // Links de compra para cada variável - Shopify Checkout
     const purchaseLinks = {
         '35-40': {
-            '1': 'https://example.com/checkout/35-40-1unidad',  // Variável 1
-            '2': 'https://example.com/checkout/35-40-2unidades' // Variável 2
+            '1': 'https://kfnjpd-am.myshopify.com/cart/52647636599147:1?channel=buy_button',
+            '2': 'https://kfnjpd-am.myshopify.com/cart/52674622521707:1?channel=buy_button'
         },
         '41-46': {
-            '1': 'https://example.com/checkout/41-46-1unidad',  // Variável 3
-            '2': 'https://example.com/checkout/41-46-2unidades' // Variável 4
+            '1': 'https://kfnjpd-am.myshopify.com/cart/52647636631915:1?channel=buy_button',
+            '2': 'https://kfnjpd-am.myshopify.com/cart/52674622554475:1?channel=buy_button'
         }
     };
 
